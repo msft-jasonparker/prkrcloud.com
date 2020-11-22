@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Code to Cloud and Beyond</title>
+    <link>https://www.prkrcloud.com/categories/</link>
+    <description>Recent content in Categories on Code to Cloud and Beyond</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 21 Nov 2020 08:24:07 -0700</lastBuildDate><atom:link href="https://www.prkrcloud.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tour</title>
+      <link>https://www.prkrcloud.com/categories/tour/</link>
+      <pubDate>Sat, 21 Nov 2020 08:24:07 -0700</pubDate>
+      
+      <guid>https://www.prkrcloud.com/categories/tour/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lifestyle</title>
+      <link>https://www.prkrcloud.com/categories/lifestyle/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://www.prkrcloud.com/categories/lifestyle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>operations</title>
+      <link>https://www.prkrcloud.com/categories/operations/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://www.prkrcloud.com/categories/operations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Working days</title>
+      <link>https://www.prkrcloud.com/categories/working-days/</link>
+      <pubDate>Sat, 14 Mar 2020 15:40:24 +0600</pubDate>
+      
+      <guid>https://www.prkrcloud.com/categories/working-days/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>syntax</title>
+      <link>https://www.prkrcloud.com/categories/syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.prkrcloud.com/categories/syntax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>https://www.prkrcloud.com/categories/themes/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.prkrcloud.com/categories/themes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
