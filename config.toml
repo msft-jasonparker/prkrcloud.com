@@ -57,7 +57,7 @@ ignoreErrors = ["error-remote-getjson"]
     [params.intro.pic]
       src                 = "img/main/Profile_pic_2018_small.jpg"
       shape               = "circle"
-      width               = ""
+      width               = "734"
       alt                 = "Jason Parker"
 
   [params.sidebar]
