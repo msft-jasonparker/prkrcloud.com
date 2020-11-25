@@ -1,5 +1,5 @@
 +++
-title = "Code to Cloud and Beyond - About"
+title = "About"
 description = "Everything you wanted or didn't want to know about me"
 author = "Jason Parker"
 date = "2020-11-25T14:01:23-07:00"
@@ -11,12 +11,12 @@ removeBlur = false
   src = "img/main/big_lake_az.jpeg"
   alt = "Big Lake AZ"
   stretch = ""
-draft = "true"
+draft = "false"
 +++
 
 # About Jason
 
-![Selfie-By-The-Lake](img/main/selfie_by_the_lake_bw_small.jpg)
+![Selfie-By-The-Lake](../img/main/selfie_by_the_lake_bw_small.jpg)
 
 I am a Sr. Consultant working for [Microsoft](www.microsoft.com), specializing in Azure Adoption and Automation and a subject matter expert in Azure, Office 365, Exchange and PowerShell authoring as well as in the dependency areas such as Windows Server, Active Directory, network services, high availability, clustering, load balancing, disaster recovery, code review and script creation.  These skill sets have been focused in local, state, and federal agencies, but not limited to these areas.
 
@@ -46,4 +46,4 @@ Proud to be born and raise in Arizona. I love to scuba dive, play video games (X
 - Be honest and have fun
 - Don’t forget to smile, its contagious
 
-![Our-Happy-Place](img/main/maui_anniversary.jpg)
+![Our-Happy-Place](../img/main/maui_anniversary.jpg)
