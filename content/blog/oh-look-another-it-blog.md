@@ -24,7 +24,7 @@ My Dad and I found our way to the computer department. The PC market was really 
 
 I was beaming as I walked out of the store. I was the proud owner of a Packard Bell Pentium 166Mhz with 16MB of RAM and a 4GB hard drive!
 
-![My-First-PC](img/main/first-pc.jpg)
+![My-First-PC](../../img/main/first-pc.jpg)
 
 ## What now, a blog?
 
