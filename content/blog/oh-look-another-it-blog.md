@@ -18,13 +18,13 @@ draft = "false"
 
 When I was in high school, circa 1996, having your own personal computer was a pretty big deal.  While some kids got money, cars, or big vacations as their high school graduation gift. My parents choice was just like my older brothers when he graduated, my own personal computer. I was pretty excited, although at this stage in my life, I had no clue the impact computers would have in shaping my career. In the mid to late 90's, big box electronic stores were one of the only ways to shop for computers. Catalogs like Computer Shopper, PC Mall, or Insight were primarily targeted at the tech savy consumer. The latest in big box stores in our area was called, 'The Incredible Universe'. To this day, I can vividly remember walking through the doors and the employees welcomed shoppers in the store using their catch phrase, 'Welcome to the Show!'. Today, that sounds pretty gimmicky, but at the time it felt like this was a special event just for you.
 
-![The-Incredible-Universe-Store](../img/main/tempe-az-incredible-universe_store.jpg)
+![The-Incredible-Universe-Store](../../img/main/tempe-az-incredible-universe_store.jpg)
 
 My Dad and I found our way to the computer department. The PC market was really starting to take off, especially with the introduction of Windows 95 just one year prior. I don't really recall much more about this experience, but I can imagine the sales people who worked in this department watching a father and son stolling through the isles trying to make sense of all the latest technology. Lucky for me, my Dad wasn't clueless when it came to electronics or computers. We had a computer in our house ever since the late 80's. I am sure my Dad and I had some stimulating conversation about the advantages of the new Intel Pentium processor, hard drive capacity, or even the new Sony Trinitron® monitors, but of course the computer had to have a 28.8kbps modem.
 
 I was beaming as I walked out of the store. I was the proud owner of a Packard Bell Pentium 166Mhz with 16MB of RAM and a 4GB hard drive!
 
-![My-First-PC](../img/main/first-pc.jpg)
+![My-First-PC](img/main/first-pc.jpg)
 
 ## What now, a blog?
 
