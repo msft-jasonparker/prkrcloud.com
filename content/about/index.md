@@ -8,7 +8,7 @@ categories = ["Personal"]
 comments = false
 removeBlur = false
 [[images]]
-  src = "img/main/big_lake_az.jpg"
+  src = "img/main/big_lake_az.jpeg"
   alt = "Big Lake AZ"
   stretch = ""
 draft = "true"
@@ -16,7 +16,7 @@ draft = "true"
 
 # About Jason
 
-![Selfie-By-The-Lake](img/main/selfie_by_the_lake_bw_small.jpg)
+![Selfie-By-The-Lake](../../static/img/main/selfie_by_the_lake_bw_small.jpg)
 
 I am a Sr. Consultant working for [Microsoft](www.microsoft.com), specializing in Azure Adoption and Automation and a subject matter expert in Azure, Office 365, Exchange and PowerShell authoring as well as in the dependency areas such as Windows Server, Active Directory, network services, high availability, clustering, load balancing, disaster recovery, code review and script creation.  These skill sets have been focused in local, state, and federal agencies, but not limited to these areas.
 
