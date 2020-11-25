@@ -5,7 +5,7 @@ title                   = "Code to Cloud and Beyond"
 theme                   = "hugo-future-imperfect-slim"
 paginate                = 3
 disqusShortname         = ""
-googleAnalytics         = ""
+googleAnalytics         = "254133749"
 pluralizeListTitles     = false
 disableLanguages        = []
 ignoreErrors = ["error-remote-getjson"]
@@ -61,7 +61,7 @@ ignoreErrors = ["error-remote-getjson"]
       alt                 = "Jason Parker"
 
   [params.sidebar]
-    about               = "Jason is a Sr. Consultant at Microsoft(R). Microsoft(R) has no connection to this web site. The use of this web site is for educational purposes and to provide general information."
+    about               = "© Jason Parker and Code to Cloud and Beyond (prkrcloud.com), 2020. Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Jason Parker and Code To Cloud and Beyond (prkrcloud.com) with appropriate and specific direction to the original content."
     postAmount          = 5
     categories          = true
     categoriesByCount   = true
