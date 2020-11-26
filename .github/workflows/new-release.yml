@@ -1,0 +1,37 @@
+name: Upload To Azure Blob Storage (alt)
+on: workflow_dispatch
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          submodules: true
+      - name: Build Hugo Site
+        uses: chabad360/hugo-actions@master
+        with:
+          buildPath: 'public'
+          # Use if you have a need to build the site to another directory
+          hugoVersion: 'extended_0.78.2'
+          # Use if your site requires a specific version of Hugo
+          # Append "extended_" to the begining to use Hugo Extended
+          args: --gc --minify --cleanDestinationDir --forceSyncStatic
+          # Use if you want to pass some custom arguments to Hugo
+        - name: Login via Az module
+          uses: azure/login@v1
+          with:
+            creds: ${{ secrets.AZURE_SP_CREDENTIALS }}
+            enable-AzPSSession: true
+
+        - name: Run Azure PowerShell script
+          uses: azure/powershell@v1
+          with:
+            azPSVersion: '5.1.0'
+            inlineScript: |
+              $Contents = Get-ChildItem -Path .\Public -Recurse -File
+              $StorageContext = Get-AzStorageAccount -ResourceGroupName ${{ secrest.AZURE_RG_NAME }} -Name ${{ secrets.STG_ACCT_NAME }}
+
+              Write-Output $StorageContext
+
+              $Contents[0] | fl * -f
