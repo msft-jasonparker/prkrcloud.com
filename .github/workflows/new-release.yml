@@ -18,20 +18,20 @@ jobs:
           # Append "extended_" to the begining to use Hugo Extended
           args: --gc --minify --cleanDestinationDir --forceSyncStatic
           # Use if you want to pass some custom arguments to Hugo
-        - name: Login via Az module
-          uses: azure/login@v1
-          with:
-            creds: ${{ secrets.AZURE_SP_CREDENTIALS }}
-            enable-AzPSSession: true
+      - name: Login via Az module
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_SP_CREDENTIALS }}
+          enable-AzPSSession: true
 
-        - name: Run Azure PowerShell script
-          uses: azure/powershell@v1
-          with:
-            azPSVersion: '5.1.0'
-            inlineScript: |
-              $Contents = Get-ChildItem -Path .\Public -Recurse -File
-              $StorageContext = Get-AzStorageAccount -ResourceGroupName ${{ secrest.AZURE_RG_NAME }} -Name ${{ secrets.STG_ACCT_NAME }}
+      - name: Run Azure PowerShell script
+        uses: azure/powershell@v1
+        with:
+          azPSVersion: '5.1.0'
+          inlineScript: |
+            $Contents = Get-ChildItem -Path .\Public -Recurse -File
+            $StorageContext = Get-AzStorageAccount -ResourceGroupName ${{ secrest.AZURE_RG_NAME }} -Name ${{ secrets.STG_ACCT_NAME }}
 
-              Write-Output $StorageContext
+            Write-Output $StorageContext
 
-              $Contents[0] | fl * -f
+            $Contents[0] | fl * -f
