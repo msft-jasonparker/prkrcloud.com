@@ -21,9 +21,9 @@ jobs:
       - name: AzCLI - Login and Upload Batch to Storage Account
         env:
           AZURE_SP_NAME: http://prkrcloud-sp
-          VERB: upload-batch
-          CONTAINER_NAME: web2
-          HUGO_BUILDPATH: public
+          VERB: 'upload-batch'
+          CONTAINER_NAME: 'web2'
+          HUGO_BUILDPATH: 'public'
         run: |
           # login to azure with pre-created service principal
           az login --service-principal -u $AZURE_SP_NAME -p ${{ secrets.AZURE_SP_CLIENTSECRET }} --tenant ${{ secrets.AZURE_SP_TENANTID }}
@@ -35,4 +35,4 @@ jobs:
           
           ls $HUGO_BUILDPATH
           
-          az storage blob $VERB --account-name ${{ secrets.STG_ACCT_NAME }} --account-key ${{ secrets.STG_KEY }} --source $HUGO_BUILDPATH --destination CONTAINER_NAME
+          az storage blob $VERB --account-name ${{ secrets.STG_ACCT_NAME }} --account-key ${{ secrets.STG_KEY }} --source $HUGO_BUILDPATH --destination $CONTAINER_NAME
