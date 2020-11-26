@@ -4,11 +4,11 @@ jobs:
   upload:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout prkrcloud.com Repository
         uses: actions/checkout@master
         with:
           submodules: true
-      - name: Build Hugo Site
+      - name: Build Hugo Site into Public
         uses: chabad360/hugo-actions@master
         with:
           buildPath: 'public'
@@ -18,20 +18,21 @@ jobs:
           # Append "extended_" to the begining to use Hugo Extended
           args: --gc --minify --cleanDestinationDir --forceSyncStatic
           # Use if you want to pass some custom arguments to Hugo
-        - name: Login via Az module
-          uses: azure/login@v1
-          with:
-            creds: ${{ secrets.AZURE_SP_CREDENTIALS }}
-            enable-AzPSSession: true
-
-        - name: Run Azure PowerShell script
-          uses: azure/powershell@v1
-          with:
-            azPSVersion: '5.1.0'
-            inlineScript: |
-              $Contents = Get-ChildItem -Path .\Public -Recurse -File
-              $StorageContext = Get-AzStorageAccount -ResourceGroupName ${{ secrest.AZURE_RG_NAME }} -Name ${{ secrets.STG_ACCT_NAME }}
-
-              Write-Output $StorageContext
-
-              $Contents[0] | fl * -f
+      - name: AzCLI - Login and Upload Batch to Storage Account
+        env:
+          AZURE_SP_NAME: http://prkrcloud-sp
+          VERB: 'upload-batch'
+          CONTAINER_NAME: 'web2'
+          HUGO_BUILDPATH: 'public'
+        run: |
+          # login to azure with pre-created service principal
+          az login --service-principal -u $AZURE_SP_NAME -p ${{ secrets.AZURE_SP_CLIENTSECRET }} --tenant ${{ secrets.AZURE_SP_TENANTID }}
+          # batch upload to azure storage account - update env params above to match your environment
+          echo "VERB: $VERB"
+          echo "AZURE_SP_NAME: $AZURE_SP_NAME"
+          echo "CONTAINER_NAME: $CONTAINER_NAME"
+          echo "HUGO_BUILDPATH: $HUGO_BUILDPATH"
+          
+          ls $HUGO_BUILDPATH
+          
+          az storage blob $VERB --account-name ${{ secrets.STG_ACCT_NAME }} --account-key ${{ secrets.STG_KEY }} --source $HUGO_BUILDPATH --destination $CONTAINER_NAME
