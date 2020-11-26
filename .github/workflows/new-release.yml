@@ -4,35 +4,36 @@ jobs:
   upload:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout prkrcloud.com Repository
         uses: actions/checkout@master
         with:
           submodules: true
+
       - name: Build Hugo Site into Public
         uses: chabad360/hugo-actions@master
         with:
-          buildPath: 'public'
           # Use if you have a need to build the site to another directory
-          hugoVersion: 'extended_0.78.2'
-          # Use if your site requires a specific version of Hugo
+          buildPath: 'public'
+          
+          # Use if your site requires a specific version of Hugo.
           # Append "extended_" to the begining to use Hugo Extended
-          args: --gc --minify --cleanDestinationDir --forceSyncStatic
+          hugoVersion: 'extended_0.78.2'
+
           # Use if you want to pass some custom arguments to Hugo
+          args: --gc --minify --cleanDestinationDir --forceSyncStatic
+      
       - name: AzCLI - Login and Upload Batch to Storage Account
         env:
           AZURE_SP_NAME: http://prkrcloud-sp
           VERB: 'upload-batch'
-          CONTAINER_NAME: 'web2'
+          CONTAINER_NAME: '$web'
           HUGO_BUILDPATH: 'public'
+          AZURE_CDN_ENDPOINT: 'code2cloud-cdn'
         run: |
           # login to azure with pre-created service principal
           az login --service-principal -u $AZURE_SP_NAME -p ${{ secrets.AZURE_SP_CLIENTSECRET }} --tenant ${{ secrets.AZURE_SP_TENANTID }}
-          # batch upload to azure storage account - update env params above to match your environment
-          echo "VERB: $VERB"
-          echo "AZURE_SP_NAME: $AZURE_SP_NAME"
-          echo "CONTAINER_NAME: $CONTAINER_NAME"
-          echo "HUGO_BUILDPATH: $HUGO_BUILDPATH"
-          
-          ls $HUGO_BUILDPATH
-          
+          # batch upload to azure storage account - update env params above to match your environment          
           az storage blob $VERB --account-name ${{ secrets.STG_ACCT_NAME }} --account-key ${{ secrets.STG_KEY }} --source $HUGO_BUILDPATH --destination $CONTAINER_NAME
+          # purge cdn enpoint after upload to storage account
+          az cdn endpoint purge -g ${{ secrets.AZURE_RG_NAME }} -n $AZURE_CDN_ENDPOINT --profile-name $AZURE_CDN_ENDPOINT --content-paths /* --no-wait --verbose
