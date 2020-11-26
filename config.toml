@@ -5,10 +5,10 @@ title                   = "Code to Cloud and Beyond"
 theme                   = "hugo-future-imperfect-slim"
 paginate                = 3
 disqusShortname         = ""
-googleAnalytics         = "254133749"
+googleAnalytics         = "G-DRT8FTMRWH"
 pluralizeListTitles     = false
 disableLanguages        = []
-ignoreErrors = ["error-remote-getjson"]
+ignoreErrors            = ["error-remote-getjson"]
 
 [markup.goldmark.renderer]
   unsafe                = true
