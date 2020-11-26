@@ -8,21 +8,8 @@ jobs:
         uses: actions/checkout@master
         with:
           submodules: true
-      - name: Login via Az module
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_SP_CREDENTIALS }}
-          enable-AzPSSession: true
 
-      - name: Run Azure PowerShell script
-        uses: azure/powershell@v1
-        with:
-          azPSVersion: '5.1.0'
-          inlineScript: |
-            Get-AzContext
-            $Contents = Get-ChildItem -Path .\ -Recurse -File
-            $StorageContext = Get-AzStorageAccount -ResourceGroupName ${{ secrets.AZURE_RG_NAME }} -Name ${{ secrets.STG_ACCT_NAME }}
-
-            Write-Output $StorageContext
-
-            $Contents[0] | fl * -f
+      - name: Check Az cli
+        run: |
+          az account show
+          az storage -h
