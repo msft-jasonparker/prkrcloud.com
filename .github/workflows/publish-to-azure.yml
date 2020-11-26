@@ -1,4 +1,5 @@
 name: Publish Website
+on:
   push:
     branches:
       - main
