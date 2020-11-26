@@ -9,8 +9,10 @@ jobs:
         with:
           submodules: true
 
-      - name: Check Az cli
+      - name: Az CLI - Blob Upload
+        env:
+          VERB: "upload-batch"
+          CONTAINER_NAME: "temp"
         run: |
           az login --service-principal -u "http://prkrcloud-sp" -p ${{ secrets.AZURE_SP_CLIENTSECRET }} --tenant ${{ secrets.AZURE_SP_TENANTID }}
-          az account show
-          az storage -h
+          az storage blob $VERB --account-name ${{ secrets.STG_ACCT_NAME }} --source .\ --destination $CONTAINER_NAME
