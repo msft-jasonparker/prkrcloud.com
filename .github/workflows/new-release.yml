@@ -15,4 +15,4 @@ jobs:
           CONTAINER_NAME: "temp"
         run: |
           az login --service-principal -u "http://prkrcloud-sp" -p ${{ secrets.AZURE_SP_CLIENTSECRET }} --tenant ${{ secrets.AZURE_SP_TENANTID }}
-          az storage blob upload-batch --account-name ${{ secrets.STG_ACCT_NAME }} --account-key ${{ secrets.STG_KEY }} --source public --destination temp
+          az storage blob "$VERB" --account-name ${{ secrets.STG_ACCT_NAME }} --account-key ${{ secrets.STG_KEY }} --source .\ --destination "$CONTAINER_NAME"
