@@ -1,5 +1,7 @@
-name: Upload To Azure Blob Storage (alt)
-on: workflow_dispatch
+name: Publish Website
+  push:
+    branches:
+      - main
 jobs:
   upload:
     runs-on: ubuntu-latest
