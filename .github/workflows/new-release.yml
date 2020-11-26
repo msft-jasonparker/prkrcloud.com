@@ -30,7 +30,7 @@ jobs:
           azPSVersion: '5.1.0'
           inlineScript: |
             $Contents = Get-ChildItem -Path .\Public -Recurse -File
-            $StorageContext = Get-AzStorageAccount -ResourceGroupName ${{ secrest.AZURE_RG_NAME }} -Name ${{ secrets.STG_ACCT_NAME }}
+            $StorageContext = Get-AzStorageAccount -ResourceGroupName ${{ secrets.AZURE_RG_NAME }} -Name ${{ secrets.STG_ACCT_NAME }}
 
             Write-Output $StorageContext
 
