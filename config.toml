@@ -21,13 +21,13 @@ ignoreErrors = ["error-remote-getjson"]
   cssFiles              = ["default"]
   jsFiles               = ["default"]
   highlightjs           = true
-  highlightjsTheme      = ""
+  highlightjsTheme      = "Night Owl"
   highlightjsLang       = []
   viewMorePostsLink     = "/blog/"
   readingTime           = false
   imageStretch          = ""
   removeBlur            = false
-  socialShare           = [""]
+  socialShare           = ["twitter", "reddit", "linkedin", "email"]
   hideEmptyStats        = false
 
   [params.meta]
@@ -40,8 +40,8 @@ ignoreErrors = ["error-remote-getjson"]
     iOSColor            = "#ffffff"
 
   [params.header]
-    navbarTitle         = "C2C & Beyond"
-    dynamicTitles       = true
+    navbarTitle         = "Code To Cloud and Beyond"
+    dynamicTitles       = false
     searchMenu          = true
     shareMenu           = true
     languageMenu        = false
@@ -71,7 +71,7 @@ ignoreErrors = ["error-remote-getjson"]
     socialFooter        = true
 
   [params.staticman]
-    enabled             = true
+    enabled             = false
     api                 = ""  # No Trailing Slash
     gitProvider         = "github"
     username            = "msft-jasonparker"
