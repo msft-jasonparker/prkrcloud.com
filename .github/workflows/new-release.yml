@@ -2,7 +2,7 @@ name: Upload To Azure Blob Storage (alt)
 on: workflow_dispatch
 jobs:
   upload:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout prkrcloud.com Repository
         uses: actions/checkout@master
@@ -26,6 +26,6 @@ jobs:
           HUGO_BUILDPATH: "public"
         run: |
           # login to azure with pre-created service principal
-          az login --service-principal -u $env:AZURE_SP_NAME -p ${{ secrets.AZURE_SP_CLIENTSECRET }} --tenant ${{ secrets.AZURE_SP_TENANTID }}
+          az login --service-principal -u $AZURE_SP_NAME -p ${{ secrets.AZURE_SP_CLIENTSECRET }} --tenant ${{ secrets.AZURE_SP_TENANTID }}
           # batch upload to azure storage account - update env params above to match your environment
-          az storage blob $env:VERB --account-name ${{ secrets.STG_ACCT_NAME }} --account-key ${{ secrets.STG_KEY }} --source .\$env:HUGO_BUILDPATH --destination $env:CONTAINER_NAME
+          az storage blob $VERB --account-name ${{ secrets.STG_ACCT_NAME }} --account-key ${{ secrets.STG_KEY }} --source $HUGO_BUILDPATH --destination CONTAINER_NAME
