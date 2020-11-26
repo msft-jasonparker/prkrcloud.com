@@ -11,6 +11,6 @@ jobs:
 
       - name: Check Az cli
         run: |
-          az login --service-principal -u "prkrcloud-sp" -p ${{ secrets.AZURE_SP_CREDENTALS.clientSecret }} --tenant ${{ secrets.AZURE_SP_CREDENTALS.tenantId }}
+          az login --service-principal -u ${{ secrets.AZURE_SP_CREDENTALS.clientId }} -p ${{ secrets.AZURE_SP_CREDENTALS.clientSecret }} --tenant ${{ secrets.AZURE_SP_CREDENTALS.tenantId }}
           az account show
           az storage -h
