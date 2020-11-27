@@ -33,7 +33,7 @@ ignoreErrors            = ["error-remote-getjson"]
   [params.meta]
     description         = "Thoughts and ramblings about Azure, Automation, DevOps and all things Code (mostly PowerShell)"
     author              = "Jason Parker (msft-jasonparker)"
-    favicon             = false
+    favicon             = true
     svg                 = true
     faviconVersion      = "1"
     msColor             = "#ffffff"
@@ -62,9 +62,9 @@ ignoreErrors            = ["error-remote-getjson"]
 
   [params.sidebar]
     about               = "© Jason Parker and Code to Cloud and Beyond (prkrcloud.com), 2020. Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Jason Parker and Code To Cloud and Beyond (prkrcloud.com) with appropriate and specific direction to the original content."
-    postAmount          = 5
+    postAmount          = 15
     categories          = true
-    categoriesByCount   = true
+    categoriesByCount   = false
 
   [params.footer]
     rssFooter           = true
@@ -103,14 +103,14 @@ ignoreErrors            = ["error-remote-getjson"]
     identifier        = "categories"
     url               = "/categories/"
     pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 5
+    weight            = 4
 
   [[menu.main]]
     name              = "Contact"
     identifier        = "contact"
     url               = "/contact/"
     pre               = "<i class='far fa-envelope'></i>"
-    weight            = 6
+    weight            = 3
 
 [social]
   # Coding Communities
