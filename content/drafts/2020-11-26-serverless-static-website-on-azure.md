@@ -34,6 +34,14 @@ While you don't need to be a '*coder*' or a '*developer*' to follow this article
 > I have had these tools and systems setup for a while and setting all these up from greenfield may require some bing or google-fu.
 
 
+## Getting Started with Hugo
+
+place holder
+
+### Install (Windows)
+
+place holder
+
 ## Create a GitHub Repository
 
 place holder
