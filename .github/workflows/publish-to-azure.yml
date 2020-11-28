@@ -35,7 +35,7 @@ jobs:
           AZURE_CDN_ENDPOINT: 'code2cloud-cdn'
         run: |
           # testing connection string
-          az storage blob upload-batch --connection-string "DefaultEndpointsProtocol=https;AccountName=code2cloudwebsite;AccountKey=GX6UxjY6hchMJMYdJ8IjO7jmX1WjGDDN7tGnd2qH7cVhivp+KRcoLeGAKWQEdRBoM2R902lVtlwYecb5P24HhQ==;EndpointSuffix=core.windows.net" -s public -d '$web'
+          az storage blob $VERB --connection-string "${{ secrets.AZURE_BLOB_STORAGE_CONNECTION_STRING }}" --source $HUGO_BUILDPATH --destination $CONTAINER_NAME
           
           # login to azure with pre-created service principal
           # az login --service-principal -u $AZURE_SP_NAME -p ${{ secrets.AZURE_SP_CLIENTSECRET }} --tenant ${{ secrets.AZURE_SP_TENANTID }}
