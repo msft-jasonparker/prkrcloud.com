@@ -35,10 +35,11 @@ jobs:
           AZURE_CDN_ENDPOINT: 'code2cloud-cdn'
         run: |
           # login to azure with pre-created service principal
-          az login --service-principal -u $AZURE_SP_NAME -p ${{ secrets.AZURE_SP_CLIENTSECRET }} --tenant ${{ secrets.AZURE_SP_TENANTID }}
+          # az login --service-principal -u $AZURE_SP_NAME -p ${{ secrets.AZURE_SP_CLIENTSECRET }} --tenant ${{ secrets.AZURE_SP_TENANTID }}
           
           # batch upload to azure storage account - update env params above to match your environment          
-          az storage blob $VERB --account-name ${{ secrets.STG_ACCT_NAME }} --account-key ${{ secrets.STG_KEY }} --source $HUGO_BUILDPATH --destination $CONTAINER_NAME
+          # az storage blob $VERB --account-name ${{ secrets.STG_ACCT_NAME }} --account-key ${{ secrets.STG_KEY }} --source $HUGO_BUILDPATH --destination $CONTAINER_NAME
+          az storage blob $VERB --connection-string ${{ secrets.AZURE_BLOB_STORAGE_CONNECTION_STRING }} --source $HUGO_BUILDPATH --destination $CONTAINER_NAME
           
           # purge cdn enpoint after upload to storage account
-          az cdn endpoint purge -g ${{ secrets.AZURE_RG_NAME }} -n $AZURE_CDN_ENDPOINT --profile-name $AZURE_CDN_ENDPOINT --content-paths '/*' --no-wait --verbose
+          # az cdn endpoint purge -g ${{ secrets.AZURE_RG_NAME }} -n $AZURE_CDN_ENDPOINT --profile-name $AZURE_CDN_ENDPOINT --content-paths '/*' --no-wait --verbose
