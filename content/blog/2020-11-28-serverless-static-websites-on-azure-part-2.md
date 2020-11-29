@@ -377,8 +377,8 @@ There will be a **Part 3**, which will cover optional setup items like custom do
 
 ## Series Table of Contents
 
-[**Intro: Serverless Static Websites on Azure**](../2020-11-26-serverless-static-websites-on-azure-intro)
+[**Intro: Serverless Static Websites on Azure**](2020-11-26-serverless-static-websites-on-azure-intro)
 
-[**Part 1: Getting Started with Hugo**](../2020-11-26-serverless-static-websites-on-azure-part-1)
+[**Part 1: Getting Started with Hugo**](2020-11-27-serverless-static-websites-on-azure-part-1)
 
 Part 2: Working with GitHub Repositories
