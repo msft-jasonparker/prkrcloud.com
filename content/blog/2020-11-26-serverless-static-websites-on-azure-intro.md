@@ -44,6 +44,6 @@ If you're ready to get this going, let's move on to [**Serverless Static Website
 
 Intro: Serverless Static Websites on Azure
 
-[**Part 1: Getting Started with Hugo**](../2020-11-27-serverless-static-websites-on-azure-part-1)
+[**Part 1: Getting Started with Hugo**]({{< ref "blog/2020-11-27-serverless-static-websites-on-azure-part-1.md" >}})
 
-[**Part 2: Working with GitHub Repositories**](../2020-11-28-serverless-static-websites-on-azure-part-2)
+[**Part 2: Working with GitHub Repositori**]{{< ref "blog/2020-11-28-serverless-static-websites-on-azure-part-2.md>}}

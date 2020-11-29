@@ -15,7 +15,7 @@ draft = "false"
 #<a href="" target="_blank"></a>
 +++
 
-Previous article | [**Part 1: Getting Started with Hugo**]({{< ref "../blog/2020-11-27-serverless-static-websites-on-azure-part-1.md" >}})
+Previous article | [**Part 1: Getting Started with Hugo**]({{< ref "blog/2020-11-27-serverless-static-websites-on-azure-part-1.md" >}})
 
 Continuing this series, but adding some *spice* as we move into GitHub repositories, actions, and Azure resources...oh, my!
 
@@ -377,8 +377,8 @@ There will be a **Part 3**, which will cover optional setup items like custom do
 
 ## Series Table of Contents
 
-[**Intro: Serverless Static Websites on Azure**](2020-11-26-serverless-static-websites-on-azure-intro)
+[**Intro: Serverless Static Websites on Azure**]({{< ref "blog/2020-11-26-serverless-static-websites-on-azure-intro.md" >}})
 
-[**Part 1: Getting Started with Hugo**](2020-11-27-serverless-static-websites-on-azure-part-1)
+[**Part 1: Getting Started with Hugo**]({{< ref "blog/2020-11-27-serverless-static-websites-on-azure-part-1.md" >}})
 
 Part 2: Working with GitHub Repositories

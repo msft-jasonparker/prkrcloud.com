@@ -15,7 +15,7 @@ draft = "true"
 #<a href="" target="_blank"></a>
 +++
 
-Previous article | [**Intro: Serverless Static Websites on Azure**](../2020-11-26-serverless-static-websites-on-azure-intro)
+Previous article | [**Intro: Serverless Static Websites on Azure**]{{< ref "blog/2020-11-26-serverless-static-websites-on-azure-intro.md>}}
 
 ## Getting Started with <a href="https://gohugo.io/about/what-is-hugo/" target="_blank">Hugo</a>
 
@@ -253,8 +253,8 @@ Follow along for **Part 2** of this series we'll we focus on a few more complex 
 
 ## Series Table of Contents
 
-[**Intro: Serverless Static Websites on Azure**](../2020-11-26-serverless-static-websites-on-azure-intro)
+[**Intro: Serverless Static Websites on Azure**]({{< ref "blog/2020-11-26-serverless-static-websites-on-azure-intro.md" >}})
 
 Part 1: Getting Started with Hugo
 
-[**Part 2: Working with GitHub Repositories**](../2020-11-28-serverless-static-websites-on-azure-part-2)
+[**Part 2: Working with GitHub Repositori**]{{< ref "blog/2020-11-28-serverless-static-websites-on-azure-part-2.md>}}
