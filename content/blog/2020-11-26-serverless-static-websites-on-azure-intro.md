@@ -26,7 +26,7 @@ While you don't need to be a '*coder*' or a '*developer*' to follow this article
 - Create a **FREE** <a href="https://azure.microsoft.com/en-us/free/" target="_blank">Azure Account</a>
   - Azure is the Microsoft Cloud platform. **New** accounts receive a $200 credit for the first 30 days.
 - Download and install <a href="https://git-scm.com/downloads" target="_blank">Git</a>
-  - Git is an application you'll need to install on your PC or Mac. Once installed you can use the git commands from your favorite console, I prefer PowerShell. The most basic thing about git you'll need to know is the '*clone*' command. `git clone <some url.git>`
+  - Git is an application you'll need to install on your PC or Mac. Once installed you can use the git commands from your favorite console, I prefer PowerShell.
 - Download and install <a href="https://code.visualstudio.com/#alt-downloads" target="_blank">Microsoft VS Code</a>
 - **[OPTIONAL]** Buy a custom domain name <a href="https://www.namecheap.com" target="_blank">Namecheap</a> is who I use)
 
@@ -34,24 +34,16 @@ While you don't need to be a '*coder*' or a '*developer*' to follow this article
 >
 > I have had these tools and systems setup for a while and setting all these up from greenfield may require some bing or google-fu.
 
-&nbsp;
-
 ---
 
-&nbsp;
-
-If you're ready to get this going, let's move on to [**Serverless Static Websites on Azure (Part 1)**](../2020-11-26-serverless-static-websites-on-azure-part-1)
-
-&nbsp;
+If you're ready to get this going, let's move on to [**Serverless Static Websites on Azure (Part 1)**](../2020-11-27-serverless-static-websites-on-azure-part-1)
 
 ---
-
-&nbsp;
 
 ### Series Table of Contents
 
 Intro: Serverless Static Websites on Azure
 
-[**Part 1: Getting Started with Hugo**](../2020-11-26-serverless-static-websites-on-azure-part-1)
+[**Part 1: Getting Started with Hugo**](../2020-11-27-serverless-static-websites-on-azure-part-1)
 
-[**Part 2: Working with GitHub Repositories**](../2020-11-26-serverless-static-websites-on-azure-part-2)
+[**Part 2: Working with GitHub Repositories**](../2020-11-28-serverless-static-websites-on-azure-part-2)

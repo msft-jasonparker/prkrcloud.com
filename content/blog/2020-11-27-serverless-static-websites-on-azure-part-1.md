@@ -15,6 +15,8 @@ draft = "true"
 #<a href="" target="_blank"></a>
 +++
 
+Previous article | [**Intro: Serverless Static Websites on Azure**](../2020-11-26-serverless-static-websites-on-azure-intro)
+
 ## Getting Started with <a href="https://gohugo.io/about/what-is-hugo/" target="_blank">Hugo</a>
 
 Hugo is a general-purpose website framework. Technically speaking, Hugo is a <a href="https://gohugo.io/about/benefits/" target="_blank">static site generator</a>. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content. Since websites are viewed far more often than they are edited, Hugo is designed to provide an optimal viewing experience for your website’s end users and an ideal writing experience for website authors.
@@ -54,22 +56,22 @@ Now you need to add Hugo to your Windows PATH settings:
 
 #### Update PATH Settings in Windows 10
 
-1. Right click on the `Start` button.
-2. Click on `System`.
-3. Click on `Advanced System Settings` on the right under '*Related Settings*'.
-4. Click on the `Environment Variables` button on the bottom.
-5. In the User variables section, find the row called `PATH`.
-6. Double-click on `PATH`.
-7. Click the `New` button.
+1. Right click on the **Start** button.
+2. Click on **System**.
+3. Click on **Advanced System Settings** on the right under *Related Settings*
+4. Click on the **Environment Variables** button on the bottom
+5. In the User variables section, find the row called **PATH**
+6. Double-click on **PATH**.
+7. Click the **New** button.
 8. Type in the folder where `hugo.exe` was extracted, which is `C:\Hugo\bin` if you went by the instructions above.
 
   > The PATH entry should be the folder where Hugo lives and not the binary.
 
-9. Press `Enter` when you’re done typing.
+9. Press **Enter** when you’re done typing.
 
     [<img src="../../img/screenshots/2020-11-26-windows-path.png" width="264" height="251" />](../../img/screenshots/2020-11-26-windows-path.png)
 
-10. Click OK at every window to exit.
+10. Click **OK** at every window to exit.
 
 ### Testing / Running Hugo with a test website
 
@@ -87,7 +89,7 @@ Now you need to add Hugo to your Windows PATH settings:
     PS C:\Hugo\sites>
     ```
 
-3. Create a new site called `HelloWorld`
+3. Create a new site called **HelloWorld**
 
     ```
     PS C:\Hugo\sites> hugo new site HelloWorld
@@ -185,20 +187,20 @@ While the Hugo server is running, we can make changes to the folder and files of
     PS C:\Hugo\sites\HelloWorld>
     ```
 
-3. Create a new post called `My First Post`
+3. Create a new post called **My First Post**
 
     ```
     PS C:\Hugo\sites\HelloWorld> hugo new posts/my-first-post.md
     C:\Hugo\sites\HelloWorld\content\posts\my-first-post.md created
     ```
 
-4. Open Windows File Explorer (Right-click Start -> File Explorer or Win + E)
+4. Open Windows File Explorer (*Right-click Start -> File Explorer or Win + E*)
 5. Navitate to `C:\Hugo\sites` folder
 6. Right-click `HelloWorld` and select Open with Code from the context menu
 
     ![open-vscode.png](../../img/screenshots/2020-11-26-open-vscode.png)
 
-7. From the left explorer window, expand content and double-click my-first-post.md to edit the file
+7. From the left explorer window, expand content and double-click **my-first-post.md** to edit the file
 
     [<img src="../../img/screenshots/2020-11-26-vs-code-first-post.png" width="451" height="269" />](../../img/screenshots/2020-11-26-vs-code-first-post.png)
 
@@ -247,11 +249,7 @@ In **Part 1** of this series, you should have been able to:
 
 Follow along for **Part 2** of this series we'll we focus on a few more complex concepts like, getting our content uploaded to a GitHub repository, creating our Azure storage account with Static Website and automating our site creation.
 
-&nbsp;
-
 ---
-
-&nbsp;
 
 ## Series Table of Contents
 
@@ -259,4 +257,4 @@ Follow along for **Part 2** of this series we'll we focus on a few more complex 
 
 Part 1: Getting Started with Hugo
 
-[**Part 2: Working with GitHub Repositories**](../2020-11-26-serverless-static-websites-on-azure-part-2)
+[**Part 2: Working with GitHub Repositories**](../2020-11-28-serverless-static-websites-on-azure-part-2)
