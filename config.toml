@@ -9,6 +9,8 @@ googleAnalytics         = "G-DRT8FTMRWH"
 pluralizeListTitles     = false
 disableLanguages        = []
 ignoreErrors            = ["error-remote-getjson"]
+enableRobotsTXT         = true
+canonifyURLs            = true
 
 [markup.goldmark.renderer]
   unsafe                = true
