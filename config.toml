@@ -107,12 +107,12 @@ canonifyURLs            = true
     pre               = "<i class='fas fa-sitemap'></i>"
     weight            = 4
 
-  [[menu.main]]
-    name              = "Contact"
-    identifier        = "contact"
-    url               = "/contact/"
-    pre               = "<i class='far fa-envelope'></i>"
-    weight            = 3
+  #[[menu.main]]
+  #  name              = "Contact"
+  #  identifier        = "contact"
+  #  url               = "/contact/"
+  #  pre               = "<i class='far fa-envelope'></i>"
+  #  weight            = 3
 
 [social]
   # Coding Communities
